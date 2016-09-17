@@ -1,21 +1,54 @@
 header {
-    background-color: #244751;
+    background-color: #3EC9A7;
     color: #E8FDFF;
+    border-bottom-style: double;
+    border-bottom-color: #E8FDFF;
+    border-bottom-width: 5px;
 }
 
 body {
-    background-color: whitesmoke;
+    background-color: #2B879E;
 }
 
 main {
-    background-color: white;
+    background-color: whitesmoke;
     padding: 16px;
 }
 
+h1 {
+    font-family: lobster;
+    font-size: 3em;
+    margin: 0.2em;
+    margin-left: 23px;
+    
+}
+
+h2 {
+    display: inline;
+}
+
+h3 {
+    display: inline;
+}
+
+div
+{
+    display:table;
+}
+
+span
+{
+    display: table-cell;
+}
 .post {
     margin-bottom: 48px;
 }
 
 .post .user-info img {
     border-radius: 50%;
+}
+
+.post .user-info {
+     font-family: cabin; sans-serif;
+     vertical-align: middle;
 }

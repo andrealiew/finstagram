@@ -23,23 +23,7 @@ h1 {
     
 }
 
-h2 {
-    display: inline;
-}
 
-h3 {
-    display: inline;
-}
-
-div
-{
-    display:table;
-}
-
-span
-{
-    display: table-cell;
-}
 .post {
     margin-bottom: 48px;
 }
@@ -49,6 +33,6 @@ span
 }
 
 .post .user-info {
-     font-family: cabin; sans-serif;
-     vertical-align: middle;
+    font-family: cabin; sans-serif;
+    align-items: center;
 }

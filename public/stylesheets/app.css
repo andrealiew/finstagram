@@ -4,6 +4,7 @@ header {
     border-bottom-style: double;
     border-bottom-color: #E8FDFF;
     border-bottom-width: 5px;
+    min-width: 450px;
 }
 
 body {
@@ -19,14 +20,12 @@ h1 {
     font-family: lobster;
     font-size: 3em;
     margin: 0.2em;
-    margin-left: 23px;
-    
+    margin-left: 0.5em;
 }
 
 .object {
     visibility: hidden;
 }
-
 
 .post {
     margin-bottom: 48px;
@@ -34,10 +33,13 @@ h1 {
 
 .post .user-info img {
     border-radius: 50%;
+    border-style: solid;
+    border-color: #b3b3b3;
+    border-width: 1px;
 }
 
 .post .user-info {
-    font-family: cabin; sans-serif;
+    font-family: cabin;
     align-items: center;
 }
 

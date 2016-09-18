@@ -23,6 +23,10 @@ h1 {
     
 }
 
+.object {
+    visibility: hidden;
+}
+
 
 .post {
     margin-bottom: 48px;
@@ -36,3 +40,8 @@ h1 {
     font-family: cabin; sans-serif;
     align-items: center;
 }
+
+.photo img {
+    border-radius: 5%;
+}
+

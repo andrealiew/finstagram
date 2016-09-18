@@ -4,6 +4,7 @@ header {
     border-bottom-style: double;
     border-bottom-color: #E8FDFF;
     border-bottom-width: 5px;
+    /* in lib.css, main width is 450px. Added min-width to stretch header for mobile */
     min-width: 450px;
 }
 

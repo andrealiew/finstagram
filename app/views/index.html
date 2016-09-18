@@ -1,114 +1,144 @@
 <!doctype html>
 <html>
-    <head>
-        <!-- the dots in the two links below represent going backwards in the file tree (left pane) -->
-        <meta name="viewport" content="width=device-width">
-        <link rel="stylesheet" href="../../public/stylesheets/normalize.css">
-        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto+Condensed:300italic,700italic,700,300">
-        <link rel="stylesheet" href="../../public/stylesheets/lib.css">
-        <link href="https://fonts.googleapis.com/css?family=Lobster" rel="stylesheet">
-        <link href="https://fonts.googleapis.com/css?family=Cabin" rel="stylesheet">
-        <script src="https://code.jquery.com/jquery-3.1.0.min.js" integrity="sha256-cCueBR6CsyA4/9szpPfrX3s49M9vUU5BgtiJj06wt/s=" crossorigin="anonymous"></script>
-        <link rel="stylesheet" href="../../public/stylesheets/animations.css">
-        <link rel="stylesheet" href="../../public/stylesheets/app.css">
-        <title>Finstigram</title>
-    </head>
-    <body>
-       <header>
-           <h1>Finstigram</h1>
-       </header>
-       
-<!--creating first post -->
 
-       <main role="main">
-           <article class="post">
-               <div class="user-info">
-                   <img src="http://naserca.com/images/sharky_j.jpg" alt="sharky_j">
-                   <h2>sharky_j</h2>
-                   <h3>15 minutes ago</h3>
-               </div>
-               <div class="object customFadeIn">
-                   <a class="photo" href="#">
-                       <img src="http://naserca.com/images/shark.png" alt="post from sharky_j"> 
-                   </a>
-               </div>
-               <div class="actions">
-                   0 likes
-                   <span class="comment-count">0 comments</span>
-               </div>
-               <ul class="comments">
-                   <li>
-                       <p>
-                           sharky_j: Out for the weekend...too embarassed to show y'all the beach bod!
-                       </p>
-                   </li>
-               </ul>
-           </article>
-           
-<!--creating second post -->
+<head>
+  <!-- the dots in the two links below represent going backwards in the file tree (left pane) -->
+  <!-- meta attribute below is used for scaling for the device in use (ex. fits full width to mobile) -->
+  <meta name="viewport" content="width=device-width">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto+Condensed:300italic,700italic,700,300">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lobster">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Cabin">
+  <link rel="stylesheet" href="../../public/stylesheets/normalize.css">
+  <link rel="stylesheet" href="../../public/stylesheets/lib.css">
+  <link rel="stylesheet" href="../../public/stylesheets/animations.css">
+  <link rel="stylesheet" href="../../public/stylesheets/app.css">
+  <!-- adding jQuery below -->
+  <script src="https://code.jquery.com/jquery-3.1.0.min.js" integrity="sha256-cCueBR6CsyA4/9szpPfrX3s49M9vUU5BgtiJj06wt/s=" crossorigin="anonymous"></script>
 
-           <article class="post">
-               <div class="user-info">
-                   <img src="http://naserca.com/images/kirk_whalum.jpg" alt="kirk_whalum">
-                   <h2>kirk_whalum</h2>
-                   <h3>1 hour ago</h3>
-               </div>
-                <div class="object">
-                   <a class="photo" href="#">
-                       <img src="http://naserca.com/images/whale.jpg" alt="kirk_whalum">
-                   </a>
-                </div>
-               <div class="actions">
-                 0 likes
-                 <span class="comment-count">0 comments</span>
-               </div>
-               <ul class="comments">
-                   <li>
-                       <p>
-                           kirk_whalum: #weekendvibes
-                       </p>
-                   </li>
-               </ul>
-           </article>
-           
-<!-- creating third post -->
+  <title>Finstigram</title>
+</head>
 
-            <article class="post">
-                <div class="user-info">
-                    <img src="http://naserca.com/images/marlin_peppa.jpg" alt="marlin_peppa">
-                    <h2>marlin_peppa</h2>
-                    <h3>3 hours ago</h3>
-                </div>
-                <div class="object">
-                    <a class="photo" href="#">
-                        <img src="http://naserca.com/images/marlin.jpg" alt="post from marlin_peppa">
-                    </a>
-                </div>    
-                <div class="actions">
-                    0 likes
-                    <span class="comment-count">0 comments</span>
-                </div>
-                <ul class="comments">
-                    <li>
-                        <p>
-                            marlin_peppa: lunchtime! ;)
-                        </p>
-                    </li>
-                </ul>
-            </article>
-       </main>
-<script>
-  $(window).scroll(function() {
-	  $('.object').each(function() {
-      var imagePos = $(this).offset().top;
+<body>
+  <header>
+    <h1>Finstigram</h1>
+  </header>
+
+  <!--creating first post -->
+
+  <main role="main">
+    <article class="post">
+      <div class="user-info">
+        <img src="http://naserca.com/images/sharky_j.jpg" alt="sharky_j">
+        <h2>sharky_j</h2>
+        <h3>15 minutes ago</h3>
+      </div>
+      <div class="object customFadeIn">
+        <a class="photo" href="#">
+          <img src="http://naserca.com/images/shark.png" alt="post from sharky_j">
+        </a>
+      </div>
+      <div class="actions">
+        0 likes
+        <span class="comment-count">0 comments</span>
+      </div>
+      <ul class="comments">
+        <li>
+          <p>
+            sharky_j: Out for the weekend...too embarassed to show y'all the beach bod!
+          </p>
+        </li>
+      </ul>
+    </article>
+
+    <!--creating second post -->
+
+    <article class="post">
+      <div class="user-info">
+        <img src="http://naserca.com/images/kirk_whalum.jpg" alt="kirk_whalum">
+        <h2>kirk_whalum</h2>
+        <h3>1 hour ago</h3>
+      </div>
+      <div class="object">
+      <!-- this div does not need the customFadeIn class as the jQuery states 
+      that they will fade in when scrolled into a view -->
+        <a class="photo" href="#">
+          <img src="http://naserca.com/images/whale.jpg" alt="kirk_whalum">
+        </a>
+      </div>
+      <div class="actions">
+        0 likes
+        <span class="comment-count">0 comments</span>
+      </div>
+      <ul class="comments">
+        <li>
+          <p>
+            kirk_whalum: #weekendvibes
+          </p>
+        </li>
+      </ul>
+    </article>
+
+    <!-- creating third post -->
+
+    <article class="post">
+      <div class="user-info">
+        <img src="http://naserca.com/images/marlin_peppa.jpg" alt="marlin_peppa">
+        <h2>marlin_peppa</h2>
+        <h3>3 hours ago</h3>
+      </div>
+      <div class="object">
+      <!-- this div does not need the customFadeIn class as the jQuery states 
+      that they will fade in when scrolled into a view -->
+        <a class="photo" href="#">
+          <img src="http://naserca.com/images/marlin.jpg" alt="post from marlin_peppa">
+        </a>
+      </div>
+      <div class="actions">
+        0 likes
+        <span class="comment-count">0 comments</span>
+      </div>
+      <ul class="comments">
+        <li>
+          <p>
+            marlin_peppa: lunchtime! ;)
+          </p>
+        </li>
+      </ul>
+    </article>
+  </main>
+
+  <!-- Below is jQuery taken from a tutorial found online for the animation (see animation.css) -->
+
+  <script>
+    $(window).scroll(function() {
+      //Original code for the animation to fade in when scrolled into view
+      //BUT this does not work on screens that are very large (ex. monitors that are bigger than my 13" laptop,
+      //as reproduced when zoomed out to <90% in browser)
+
+        // $('.object').each(function() {
+        //     var imagePos = $(this).offset().top;
   
-    	var topOfWindow = $(window).scrollTop();
-    		
-    	if (imagePos < topOfWindow+400) {
-    	  $(this).addClass("customFadeIn");
-    	}
+        //   	var topOfWindow = $(window).scrollTop();
+  
+        //   	if (imagePos < topOfWindow+400) {
+        //   	  $(this).addClass("customFadeIn");
+        //   	}
+        //   });
+
+
+      //Fixed calculation with the help of crazy boyfriend:
+
+      $('.object').each(function() {
+        var topOfImage = $(this).offset().top;
+
+        var bottomOfWindow = $(window)[0].pageYOffset + $(window)[0].innerHeight;
+
+        if (topOfImage + $(this).height() / 2 < bottomOfWindow) {
+          $(this).addClass("customFadeIn");
+        }
+      });
     });
-	});
-</script>
-    </body>
+  </script>
+</body>
+
 </html>

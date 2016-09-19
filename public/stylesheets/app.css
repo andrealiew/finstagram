@@ -3,9 +3,19 @@ header {
     color: #E8FDFF;
     border-bottom-style: double;
     border-bottom-color: #E8FDFF;
-    border-bottom-width: 5px;
+    border-bottom-width: 8px;
     /* in lib.css, main width is 450px. Added min-width to stretch header for mobile */
     min-width: 450px;
+}
+
+#logoHeader {
+    width: 3em;
+    margin-left: 1em;
+}
+
+#headerBox {
+  display: flex;
+  align-items: center;
 }
 
 body {
@@ -21,7 +31,7 @@ h1 {
     font-family: lobster;
     font-size: 3em;
     margin: 0.2em;
-    margin-left: 0.5em;
+    margin-left: 0.3em;
 }
 
 .object {

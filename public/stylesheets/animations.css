@@ -32,14 +32,15 @@ customFadeIn - created by Andrea
 	-webkit-animation-timing-function: ease-out;		
 
 	visibility: visible !important;	
+
 }
 
 @keyframes customFadeIn {
 	0% {
 		transform: scale(0.8);
-		opacity: 0.0;		
-	}
+		opacity: 0.0;
 
+	}
 	100% {
 		transform: scale(1);
 		opacity: 1;	
@@ -49,11 +50,11 @@ customFadeIn - created by Andrea
 @-webkit-keyframes customFadeIn {
 	0% {
 		-webkit-transform: scale(0.8);
-		opacity: 0.0;		
+		opacity: 0.0;
 	}
-	
+
 	100% {
-		-webkit-transform: scale(1);
+		-webkit-transform: sclae(1);
 		opacity: 1;	
 	}		
 }

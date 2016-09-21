@@ -43,11 +43,13 @@
         <h2>sharky_j</h2>
         <h3>15 minutes ago</h3>
       </div>
+      
       <div class="object customFadeIn">
         <a class="photo" href="#">
           <img src="http://naserca.com/images/shark.png" alt="post from sharky_j">
         </a>
       </div>
+
       <div class="actions">
         0 likes
         <span class="comment-count">0 comments</span>
@@ -122,6 +124,7 @@
 
   <script>
     $(window).scroll(function() {
+      
       //Original code for the animation to fade in when scrolled into view
       //BUT this does not work on screens that are very large (ex. monitors that are bigger than my 13" laptop,
       //as reproduced when zoomed out to <90% in browser)
@@ -129,19 +132,19 @@
         // $('.object').each(function() {
         //     var imagePos = $(this).offset().top;
   
-        //   	var topOfWindow = $(window).scrollTop();
+        //  	var topOfWindow = $(window).scrollTop();
   
         //   	if (imagePos < topOfWindow+400) {
-        //   	  $(this).addClass("customFadeIn");
-        //   	}
-        //   });
+        //	  $(this).addClass("customFadeIn");
+        //  	}
+        //  });
 
 
-      //Fixed calculation with the help of crazy boyfriend:
+      //Fixed calculation with help:
 
       $('.object').each(function() {
         var topOfImage = $(this).offset().top;
-
+        
         var bottomOfWindow = $(window)[0].pageYOffset + $(window)[0].innerHeight;
 
         if (topOfImage + $(this).height() / 2 < bottomOfWindow) {

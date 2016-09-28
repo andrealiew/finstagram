@@ -11,7 +11,7 @@ get '/' do
     username: "sharky_j",
     avatar_url: "http://naserca.com/images/sharky_j.jpg",
     photo_url: "http://naserca.com/images/shark.jpg",
-    humanized_time_ago: humanized_time_ago(15),
+    time_ago_in_minutes: time_ago_in_minutes(15),
     like_count: 0,
     comment_count: 1,
     comments: [{
@@ -24,7 +24,7 @@ get '/' do
     username: "kirk whalum",
     avatar_url: "http://naserca.com/images/kirk_whalum.jpg",
     photo_url: "http://naserca.com/images/whale.jpg",
-    humanized_time_ago: humanized_time_ago(65),
+    time_ago_in_minutes: time_ago_in_minutes(65),
     like_count: 0,
     comment_count: 1,
     comments: [{
@@ -37,7 +37,7 @@ get '/' do
     username: "marlin_peppa",
     avatar_url: "http://naserca.com/images/marlin_peppa.jpg",
     photo_url: "http://naserca.com/images/marlin.jpg",
-    humanized_time_ago: humanized_time_ago(190),
+    time_ago_in_minutes: time_ago_in_minutes(190),
     like_count: 0,
     comment_count: 1,
     comments: [{

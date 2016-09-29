@@ -1,3 +1,7 @@
+# We run this file by "bundle exec rake db:migrate" in console
+# This file helps us build/modify our database schema
+# ActiveRecord is an ORM migrations allows us to use Ruby language instead of SQL
+
 class CreateBaseTables < ActiveRecord::Migration
 
   def change

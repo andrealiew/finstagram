@@ -14,7 +14,7 @@
           <h3><%= post.humanized_time_ago %></h3>
         </div>
         
-        <div class="object customFadeIn">
+        <div class="object">
           <a class="photo" href="#">
             <img src="<%= post.photo_url %>" alt="post from <%= post.user.username %>">
           </a>
@@ -40,8 +40,21 @@
   <!-- Below is jQuery taken from a tutorial found online for the animation (see animation.css) -->
 
   <script>
-    $(window).scroll(function() {
+  $(function () {
+    function fadeIn(element) {
+      var topOfImage = $(element).offset().top;
       
+      var bottomOfWindow = $(window)[0].pageYOffset + $(window)[0].innerHeight;
+      
+      if (topOfImage + $(element).height() / 2 < bottomOfWindow) {
+        $(element).addClass("customFadeIn");
+      }
+    };
+    
+    if ($('.object')[0]) 
+      fadeIn($('.object')[0]);
+    
+    $(window).scroll(function() {
       //Original code for the animation to fade in when scrolled into view
       //BUT this does not work on screens that are very large (ex. monitors that are bigger than my 13" laptop,
       //as reproduced when zoomed out to <90% in browser)
@@ -58,15 +71,7 @@
 
 
       //Fixed calculation with help:
-
-      $('.object').each(function() {
-        var topOfImage = $(this).offset().top;
-        
-        var bottomOfWindow = $(window)[0].pageYOffset + $(window)[0].innerHeight;
-
-        if (topOfImage + $(this).height() / 2 < bottomOfWindow) {
-          $(this).addClass("customFadeIn");
-        }
-      });
+      $('.object').each(function(i, element) { fadeIn(element); });
     });
+  });
   </script>

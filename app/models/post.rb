@@ -7,7 +7,7 @@ class Post < ActiveRecord::Base
 
   def humanized_time_ago
     time_ago_in_seconds = Time.now - self.created_at 
-    #equivalent to calling. created_at on the object itself
+    #equivalent to calling .created_at on the object itself
     time_ago_in_minutes = time_ago_in_seconds / 60
     
     if time_ago_in_minutes >= 60

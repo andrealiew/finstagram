@@ -1,0 +1,31 @@
+<!-- displays error messages for each field -->
+<ul class="errors">
+  <% @user.errors.full_messages.each do |message| %>
+    <li><%= message %></li>
+  <% end %>
+</ul>
+
+
+<form method="POST" action="/signup"> <!--Form submission should post; send request to "/signup" -->
+  <div class="form-group">
+    <label for="email">Email</label>        
+    <input type="email" id="email" name="email" value="<%= @user.email %>"> <!-- gator tags to send info to server -->
+  </div>  
+  <div class="form-group">
+    <label for="avatar_url">Avatar URL</label>
+    <input type="text" id="avatar_url" name="avatar_url" value="<%= @user.avatar_url %>">
+  </div>  
+    <label for="username">Username</label>
+    <input type="text" id="username" name="username" value="<%= @user.username %>">
+  <div class="form-group">    
+    <label for="password">Password</label>
+    <input type="password" id="password" name="password">
+  </div>  
+    <button class="button" type="sumbit">Signup</button>
+    
+<!-- On the sign up page, when you click the label,
+it would put the text cursor into the field.
+The label for and input id relationship may seen insignificant
+but is important for accessibility. -->
+
+</form>

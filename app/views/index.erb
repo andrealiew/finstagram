@@ -3,6 +3,15 @@
     <img id="logoHeader" src="/images/logoHeader.png">
     <h1>Finstigram</h1>
     </div>
+    <div class="login-info">
+      <% if current_user %>
+        <%= current_user.username %>
+        <a href="/logout">Logout</a>
+      <% else %>
+        <a href="/login">Login</a>
+        <a href="/signup">Signup</a>
+      <% end %>
+    </div>
   </header>
 
   <main role="main">
@@ -24,7 +33,6 @@
           <span class="comment-count"><%= post.comment_count %> comments</span>
         </div>
         <ul class="comments">
-          <!-- Lines 28-34: makes so that there can be more than 1 comment -->
           <% post.comments.each do |comment| %>
             <li>
               <p>

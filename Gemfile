@@ -8,6 +8,8 @@ gem 'sinatra'
 gem 'sinatra-contrib'
 gem 'sinatra-activerecord'
 
+gem 'bcrypt'
+
 gem 'puma'
 gem 'tux'
 

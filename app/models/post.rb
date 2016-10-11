@@ -7,7 +7,8 @@ class Post < ActiveRecord::Base
 
   validates_presence_of :photo_url, :user 
   # validating that we not only have a :user_id, but that we 
-  # actually have a User record with said id
+  # actually have a User record with said id. Try with tux: need user_id:1
+  
   def humanized_time_ago
     time_ago_in_seconds = Time.now - self.created_at 
     #equivalent to calling .created_at on the object itself

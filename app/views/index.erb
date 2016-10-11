@@ -1,11 +1,25 @@
+<% if current_user %>
+  <div class="new-post">
+    <a href="/posts/new" class="button">New Post</a>
+  </div>
+<% end %>
+
+<main role="main">
+  <% @posts.each do |post| %>
+    <%= erb :'shared/post', locals: { post: post} %>
+  <% end %>
+</main> 
+ 
+<!-- all of this is removed and replaced with the above code, referencing to post.erb
+
   <header>
     <div id="headerBox">
     <img id="logoHeader" src="/images/logoHeader.png">
     <h1>Finstigram</h1>
     </div>
     <div class="login-info">
-      <% if current_user %>
-        <%= current_user.username %>
+      <% if @current_user %>
+        <%= @current_user.username %>
         <a href="/logout">Logout</a>
       <% else %>
         <a href="/login">Login</a>
@@ -44,9 +58,9 @@
       </article>
     <% end %>
   </main>
+-->
 
-  <!-- Below is jQuery taken from a tutorial found online for the animation (see animation.css) -->
-
+<!-- Below is jQuery taken from a tutorial found online for the animation (see animation.css) -->
   <script>
   $(function () {
     function fadeIn(element) {

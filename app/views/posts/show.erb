@@ -1,51 +1,8 @@
-<!-- same as index.erb but now we're using the global @posts -->
-<header>
-  <div id="headerBox">
-  <img id="logoHeader" src="/images/logoHeader.png">
-  <h1>Finstigram</h1>
-  </div>
-  <div class="login-info">
-    <% if current_user %>
-      <%= current_user.username %>
-      <a href="/logout">Logout</a>
-    <% else %>
-      <a href="/login">Login</a>
-      <a href="/signup">Signup</a>
-    <% end %>
-  </div>
-</header>
-
 <main role="main">
-  <article class="post">
-    <div class="user-info">
-      <img src="<%= @post.user.avatar_url %>" alt="<%= @post.user.username %>">
-      <h2><%= @post.user.username %></h2>
-      <h3><%= @post.humanized_time_ago %></h3>
-    </div>
-    
-    <div class="object">
-      <a class="photo" href="#">
-        <img src="<%= @post.photo_url %>" alt="post from <%= @post.user.username %>">
-      </a>
-    </div>
-    <div class="actions">
-      <%= @post.like_count %> likes
-      <span class="comment-count"><%= @post.comment_count %> comments</span>
-    </div>
-    <ul class="comments">
-      <% @post.comments.each do |comment| %>
-        <li>
-          <p>
-            <%= comment.user.username %>: <%= comment.text %>
-          </p>
-        </li>
-      <% end %>
-    </ul>
-  </article>
+  <%= erb :'shared/post', locals: { post: @post} %>
 </main>
 
-<!-- Below is jQuery taken from a tutorial found online for the animation (see animation.css) -->
-
+<!-- jquery for animation
 <script>
 $(function () {
   function fadeIn(element) {
@@ -82,3 +39,4 @@ $(function () {
   });
 });
 </script>
+-->

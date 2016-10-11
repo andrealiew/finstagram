@@ -68,3 +68,35 @@ get '/' do
   @posts = Post.order(created_at: :desc)
   erb(:index)
 end
+
+# ADDING POSTS
+# first, display the form (GET):
+
+get '/posts/new' do
+  @post = Post.new
+  erb(:"posts/new")
+end
+
+# second, process the submission (POST):
+
+post '/posts' do
+  photo_url = params[:photo_url]
+  
+  #instantiate new Post
+  @post = Post.new({ photo_url: photo_url, user_id: current_user.id })
+  
+  #if @post validates, save
+  if @post.save
+    redirect(to('/'))
+  else
+    erb(:"posts/new")
+  end
+end
+
+# DISPLAY INDIVIDUAL POST
+
+get '/posts/:id' do   #:id is the wildcard, specifically and id value
+  @post = Post.find(params[:id])  # find the post with the ID from the URL
+  erb(:"posts/show")  # render the show.erb file
+end
+

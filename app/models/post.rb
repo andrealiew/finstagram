@@ -5,6 +5,9 @@ class Post < ActiveRecord::Base
   has_many :comments
   has_many :likes
 
+  validates_presence_of :photo_url, :user 
+  # validating that we not only have a :user_id, but that we 
+  # actually have a User record with said id
   def humanized_time_ago
     time_ago_in_seconds = Time.now - self.created_at 
     #equivalent to calling .created_at on the object itself

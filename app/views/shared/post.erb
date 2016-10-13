@@ -11,6 +11,12 @@
     <%= post.like_count %> likes
     <span class="comment-count"><%= post.comment_count %> comments</span>
   </div>
+  <!-- making sure user is logged in. Otherwise, won't show comment form -->
+  <% if current_user && allow_new_comment %>
+    <!-- rendering comment form via partial -->
+    <%= erb(:"shared/new_comment", { locals: { post: post }}) %>
+  <% end %>
+  
   <ul class="comments">
     <% post.comments.each do |comment| %>
       <li>

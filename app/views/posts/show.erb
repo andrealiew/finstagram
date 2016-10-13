@@ -1,6 +1,8 @@
 <main role="main">
-  <%= erb :'shared/post', locals: { post: @post} %>
+  <%= erb(:'shared/post', {locals: { post: @post, allow_new_comment: true}}) %>
 </main>
+
+
 
 <!-- jquery for animation
 <script>

@@ -100,3 +100,16 @@ get '/posts/:id' do   #:id is the wildcard, specifically and id value
   erb(:"posts/show")  # render the show.erb file
 end
 
+# CREATE ACTION FOR COMMENT FORM
+post '/comments' do
+  # point values form params to variables
+  text = params[:text]
+  post_id = params[:post_id]
+  
+  comment = Comment.new({ text: text, post_id: post_id, user_id: current_user.id })
+
+  comment.save
+  
+  redirect(back)
+end
+

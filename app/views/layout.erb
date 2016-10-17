@@ -27,9 +27,12 @@
   </head>
   <body>
     <header>
-      <h1>
-        <a href="/">Finstigram</a>
-      </h1>
+      <div id="headerBox">
+        <img id="logoHeader" src="/images/logoHeader.png">
+          <h1>
+            <a href="/">Finstigram</a>
+          </h1>
+      </div>    
       <div class="login-info">
         <% if current_user %>
           <%= current_user.username %>

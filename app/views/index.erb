@@ -4,7 +4,7 @@
   </div>
 <% end %>
 
-<main role="main">
+<main class="mainPosts">
   <% @posts.each do |post| %>
     <%= erb(:'shared/post', {locals: { post: post, allow_new_comment: false }}) %>
   <% end %>

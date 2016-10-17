@@ -24,6 +24,7 @@ input[type=text], input[type=password], input[type=email] {
   padding: .5em;
   width: 200px;
   font-size: 1em;
+  margin-bottom: 1em;
 }
 
 header {
@@ -34,6 +35,7 @@ header {
 
 header > .login-info {
   margin-left: auto;
+  padding: 10px;
 }
 
 main {
@@ -59,6 +61,7 @@ main {
   background-color: #3EC9A7;
   border: solid 1px #244751;
   display: inline-block;
+  border-radius: 10%
 }
 
 .post > * {

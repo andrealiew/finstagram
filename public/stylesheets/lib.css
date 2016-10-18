@@ -57,6 +57,7 @@ main {
 }
 
 .button {
+  margin-top: 10px;
   padding: .5em;
   background-color: #3EC9A7;
   border: solid 1px #244751;
@@ -64,6 +65,11 @@ main {
   border-radius: 10%
 }
 
+.button:hover {
+  background-color: #74d8bf;
+}
+
+}
 .post > * {
   margin-bottom: 1em;
 }

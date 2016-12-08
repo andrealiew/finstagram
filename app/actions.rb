@@ -64,10 +64,10 @@ get '/logout' do
   redirect to('/')
 end
 
-get '/' do
-  @posts = Post.order(created_at: :desc)
-  erb(:index)
-end
+#get '/' do
+ # @posts = Post.order(created_at: :desc)
+  #erb(:index)
+#end
 
 # ADDING POSTS
 # first, display the form (GET):

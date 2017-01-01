@@ -1,4 +1,4 @@
-class CreateUserTables < ActiveRecord::Migration
+class CreateUsersTables < ActiveRecord::Migration
   
  def change
    create_table :users do |t|
@@ -7,5 +7,5 @@ class CreateUserTables < ActiveRecord::Migration
       t.string :password_hash
       t.timestamps
     end
-  end
+ end
 end
